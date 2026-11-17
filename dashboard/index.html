@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar — radar-4</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header>
+<h1>Token Radar</h1>
+<p class="sub">Model radar-4 &middot; Snapshot 2026-11-14 &middot; Source: DefiLlama protocols snapshot &middot; make.fun token-radar-01</p>
+<div class="cards">
+<div class="card"><span class="k">Ranked rows</span><strong id="cRows">198</strong></div>
+<div class="card"><span class="k">Watchlist</span><strong id="cWatch">40</strong></div>
+<div class="card"><span class="k">Traded comps</span><strong id="cComps">61</strong></div>
+<div class="card"><span class="k">Top implied value</span><strong id="cTop">$117,932,625</strong><span class="k" id="cTopName">Sentora Curator</span></div>
+<div class="card"><span class="k">Verdicts</span><strong id="cVerdicts">9 FARM &middot; 125 WATCH &middot; 64 SKIP</strong></div>
+<div class="card"><span class="k">Median out-of-sample error</span><strong id="cOos">&times;2.08</strong><span class="k">5-fold cross-validation</span></div>
+</div>
+</header>
+<nav class="tabs" aria-label="Views">
+<button id="t-board" data-tab="board" class="on" type="button">Board</button>
+<button id="t-live" data-tab="live" type="button">Live tokens</button>
+<button id="t-method" data-tab="method" type="button">Method</button>
+</nav>
+<section id="tab-board">
+<div id="detail"></div>
+<div class="controls">
+<input id="fSearch" type="search" placeholder="Search name, slug or category" aria-label="Search protocols">
+<select id="fCat" aria-label="Filter by category"><option value="">All categories</option></select>
+<select id="fVerdict" aria-label="Filter by verdict"><option value="">All verdicts</option><option value="FARM">FARM</option><option value="WATCH">WATCH</option><option value="SKIP">SKIP</option></select>
+<span id="count" class="muted"></span>
+</div>
+<div id="boardWrap" class="tablewrap"></div>
+<p class="muted fine">Implied values are model estimates, not prices. Click a row for the model breakdown, farm economics and an eight-step farm plan. Verdicts: FARM nets at least $10, WATCH nets between &minus;$5 and $10, SKIP nets less than &minus;$5.</p>
+</section>
+<section id="tab-live" hidden>
+<div id="liveWrap" class="tablewrap"></div>
+<p class="muted fine">Live tokens already trade, so the board shows the market&rsquo;s own value for them, not a model estimate. Sorted by market cap.</p>
+</section>
+<section id="tab-method" hidden>
+<div id="methodWrap"></div>
+</section>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
